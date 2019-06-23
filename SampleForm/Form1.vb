@@ -32,4 +32,28 @@
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles LabelTreeView.Click
 
     End Sub
+
+    Private Sub MonthCalendar_DateChanged(sender As Object, e As DateRangeEventArgs) Handles MonthCalendar.DateChanged
+        LabelMonthCalendarValue.Text = MonthCalendar.SelectionStart.ToString
+
+    End Sub
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
+        LabelRadioButtonValue1.Text = RadioButton1.Checked.ToString
+    End Sub
+
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
+        LabelRadioButtonValue2.Text = RadioButton2.Checked.ToString
+    End Sub
+
+    Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.CheckedChanged
+        LabelRadioButtonValue3.Text = RadioButton3.Checked.ToString
+
+    End Sub
+
+    Private Sub TreeView_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeView.AfterSelect
+        LabelTreeViewValue.Text = TreeView.SelectedNode.Text
+
+
+    End Sub
 End Class
